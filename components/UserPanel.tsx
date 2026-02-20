@@ -246,6 +246,8 @@ export const UserPanel: React.FC<UserPanelProps> = ({ user, data, onApply, onDed
                <thead className="bg-gray-50">
                  <tr>
                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">证书编号</th>
+                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">专利名称</th>
+                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">专利号</th>
                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">项目名称</th>
                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">授权时间</th>
                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">状态</th>
@@ -260,6 +262,8 @@ export const UserPanel: React.FC<UserPanelProps> = ({ user, data, onApply, onDed
                    return (
                    <tr key={cert.id} className="hover:bg-gray-50">
                      <td className="px-6 py-4 whitespace-nowrap font-mono text-sm text-gray-600">{cert.id}</td>
+                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{cert.patentName}</td>
+                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{cert.patentNo}</td>
                      <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{cert.projectName}</td>
                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {new Date(cert.issueDate).toLocaleString('zh-CN')}
